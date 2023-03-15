@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Reservation{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="{{ asset('/assets/css/reservation.css') }}"/>
+
+<div class="body-content">
+    
+
+    {# {{ include('reservation/_form.html.twig') }} #}
+    <div class="login-wrapper">
+        {{ form_start(form, { 'attr': {'class': 'form'}})}}
+
+        <h1>Réservation</h1>
+        {# {% if is_granted('ROLE_USER') %}
+        <div class="input-group">Nom : {{ app.user.nom}}</div>
+        <div class="input-group">Prénom : {{ app.user.prenom }}</div>
+        <div class="input-group">Téléphone : 0{{ app.user.phone }}</div>
+        <div class="input-group">E-mail : {{ app.user.email }}</div>
+        {% else %} #}
+            {{ form_row(form.lastname) }}
+
+            {{ form_row(form.firstname) }}
+
+            {% for message in app.flashes('notice') %}
+                <div class="flash-notice">
+                    {{ message }}
+                </div>
+            {% endfor %}
+            {{ form_row(form.phone)}}
+
+            {{ form_row(form.email) }}
+        {# {% endif %} #}
+
+        {% for message in app.flashes('noticeDate') %}
+                <div class="flash-notice">
+                    {{ message }}
+                </div>
+        {% endfor %}
+        {{ form_row(form.date)}}
+
+        {{ form_row(form.type)}}
+
+        <button class="btn" id="open">{{ button_label|default('Réserver') }}</button>
+        {{ form_end(form) }}
+    </div>
+
+
+</div>
+{% endblock %}

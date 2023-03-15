@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="{{ asset('/assets/css/navbar.css') }}"/>
+
+
+<nav>
+    <div>
+        <a class="logo" href={{path("app_accueil")}}>SPP</a>
+    </div>
+
+    <div>
+        <a href={{path("app_accueil")}}>Accueil</a>
+        {% if is_granted('ROLE_USER') %}
+            <a href={{path("app_reservation_new")}}>Réservation</a> 
+            {# <a href={{path("app_user_show")}}>Mon profil</a> #}
+            <a href="{{ path('app_logout') }}">Déconnexion</a> 
+        {% else %}  
+            <a href="{{ path('app_register') }}">Inscription</a> 
+            <a href="{{ path('app_login') }}">Connexion</a>  
+        {% endif %}
+        {% if is_granted('ROLE_ADMIN') %}
+            <a href={{path("app_user_index")}}>Administration</a>
+        {% endif %} 
+    </div>
+</nav>

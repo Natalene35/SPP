@@ -1,0 +1,31 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    background-color: #FECB0E;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 1rem;
+    color: black;
+    transition: 0.5s;
+}
+
+nav a:hover {
+    scale: 1.1;
+    color: red;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-family: 'Anton', sans-serif;
+    background: center / contain no-repeat url(/assets/images/octogone-rouge.png);
+    color: white;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+

@@ -1,0 +1,23 @@
+.body-content {
+    max-width: 1200px;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    margin: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h2 {
+    margin: 1rem 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+p {
+    line-height: 1.1;
+}

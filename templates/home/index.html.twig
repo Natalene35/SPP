@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="{{ asset('assets/css/accueil.css') }}"/>
+
+    <div class="body-content">
+
+        <header>
+            
+            <h1>Garage SPP</h1>
+            
+            <h2><span>S</span>top <span>P</span>are-brise et <span>P</span>neus</h2>
+            {% if app.user %}
+                <div class="mb-3">
+                    Vous etes connecter en tant que {{ app.user.firstname }}
+                </div>
+            {% endif %}
+        </header>
+
+        <main>
+            <div class="card-container">
+                <div class="card">
+                    <h3>PARE-BRISE</h3>
+                    <p>Franchise offerte <br/>
+                    Vitres teintées
+                    </p>
+                    <h3>PNEUS</h3>
+                    <p>Pneus neufs et d'occasion</p>
+                    <p>Réparation de pneus</p>
+                    <h3>MONTAGE DE DISQUES ET PLAQUETTES DE FREINS</h3>
+                </div>
+
+                <div class="card">
+                    <h3>DES PROFESSIONNELS A VOTRE SERVICE</h3>
+                    <p>Du lundi au samedi de 8h30 à 18h
+                </div>
+            </div>
+        </main>
+    </div>
+{% endblock %}

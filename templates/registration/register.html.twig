@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="{{ asset('/assets/css/register.css') }}"/>
+
+<div class="body-content">
+
+    {{ form_start(registrationForm, { 'attr': {'class': 'form'}}) }}
+        <h1>Inscription</h1>
+        
+        {{ form_row(registrationForm.lastname) }}
+        {{ form_row(registrationForm.firstname) }}
+        {% for message in app.flashes('notice') %}
+                <div class="flash-notice">
+                    {{ message }}
+                </div>
+        {% endfor %}
+        {{ form_row(registrationForm.phone) }}
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.plainPassword) }} 
+
+        <button type="submit" class="btn">S'inscrire</button>
+    {{ form_end(registrationForm) }}
+</div>
+
+{% endblock %}

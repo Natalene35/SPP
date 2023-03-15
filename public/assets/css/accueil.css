@@ -1,0 +1,50 @@
+.body-content {
+    max-width: 1200px;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    position: relative;
+    margin: 4rem;
+}
+
+h1, h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.header-title {
+    display: flex;
+    margin: auto;
+}
+
+h1 {
+    margin: auto;
+    color: red;
+    vertical-align: middle;
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+span {
+    color: red;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    border: 2px solid #FECB0E;
+    border-radius: 15px;
+    padding: 1rem;
+    line-height: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.3);
+}
